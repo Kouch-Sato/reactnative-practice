@@ -32,8 +32,8 @@ export default class App extends React.Component {
           </View>
         </View>
 
-        <View>
-          <Text>+</Text>
+        <View style={styles.addButton}>
+          <Text style={styles.addButtonText}>+</Text>
         </View>
       </View>
     );
@@ -80,11 +80,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   todoTitle: {
-    fontSize: 18,
-    paddingBottom: 4,
+    fontSize: 20,
+    paddingBottom: 6,
   },
   todoDate: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#aaa',
+  },
+  addButton: {
+    position: 'absolute',
+    bottom: 50,
+    right: 32,
+    height: 60,
+    width: 60,
+    backgroundColor: 'skyblue',
+    borderRadius: 30,
+    shadowColor: 'black',
+    shadowOffset: {width:0, height: 2},
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    zIndex: 10,
+  },
+  addButtonText: {
+    fontSize: 30,
+    lineHeight: 54,
+    textAlign: 'center',
   }
 });
