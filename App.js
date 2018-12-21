@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import TodoList from './src/components/TodoList';
-import Header from './src/components/Header';
-import CircleButton from './src/elements/CircleButton';
+import TodoListScreen from './src/screens/TodoListScreen';
+import Header from "./src/components/Header";
 
 
 export default class App extends React.Component {
@@ -11,8 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header />
-        <TodoList />
-        <CircleButton>+</CircleButton>
+        <TodoListScreen />
       </View>
     );
   }
