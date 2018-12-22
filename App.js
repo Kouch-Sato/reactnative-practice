@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import TodoListScreen from './src/screens/TodoListScreen';
+import TodoDetailScreen from './src/screens/TodoDetailScreen';
 import Header from "./src/components/Header";
 
 
@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header />
-        <TodoListScreen />
+        <TodoDetailScreen />
       </View>
     );
   }

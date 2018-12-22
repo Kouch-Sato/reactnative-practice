@@ -9,7 +9,9 @@ class TodoListScreen extends React.Component {
     return (
       <View style={styles.container}>
         <TodoList />
-        <CircleButton>+</CircleButton>
+        <CircleButton>
+          {'\uf067'}
+        </CircleButton>
       </View>
     );
   }

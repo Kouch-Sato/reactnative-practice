@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 class Header extends React.Component {
   render() {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 90,
     paddingTop: 40,
-    backgroundColor: 'firebrick',
+    backgroundColor: 'crimson',
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: 'black',
