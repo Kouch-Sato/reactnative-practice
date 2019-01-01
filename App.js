@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
 import Header from "./src/components/Header";
 
 
@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Header />
-        <LoginScreen />
+        <SignupScreen />
       </View>
     );
   }
