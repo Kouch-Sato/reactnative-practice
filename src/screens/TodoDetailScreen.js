@@ -15,7 +15,7 @@ class TodoDetailScreen extends React.Component {
           <Text>これは勉強のために最低限やりたい</Text>
         </View>
 
-        <CircleButton color='white' style={styles.editButton}>
+        <CircleButton color='white' style={styles.editButton} onPress={() => { this.props.navigation.navigate('TodoEdit'); }}>
           {'\uf303'}
         </CircleButton>
       </View>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   editButton: {
-    top: 90,
+    top: 45,
   }
 });
 

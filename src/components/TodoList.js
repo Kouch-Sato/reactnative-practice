@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 
 class TodoList extends React.Component {
   render() {
     return (
       <View style={styles.todoList}>
-        <View style={styles.todoListItem}>
-          <Text style={styles.todoTitle}>ReactNativeをマスターする</Text>
-          <Text style={styles.todoDate}>2018/12/15</Text>
-        </View>
+        <TouchableHighlight onPress={() => { this.props.navigation.navigate('TodoDetail'); }}>
+          <View style={styles.todoListItem}>
+            <Text style={styles.todoTitle}>ReactNativeをマスターする</Text>
+            <Text style={styles.todoDate}>2018/12/15</Text>
+          </View>
+        </TouchableHighlight>
         <View style={styles.todoListItem}>
           <Text style={styles.todoTitle}>ReactNativeをマスターする</Text>
           <Text style={styles.todoDate}>2018/12/15</Text>

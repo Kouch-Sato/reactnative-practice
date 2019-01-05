@@ -8,8 +8,8 @@ class TodoListScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TodoList />
-        <CircleButton>
+        <TodoList navigation={this.props.navigation}/>
+        <CircleButton onPress={() => { this.props.navigation.navigate('TodoEdit'); }}>
           {'\uf067'}
         </CircleButton>
       </View>
