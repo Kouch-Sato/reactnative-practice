@@ -8,7 +8,7 @@ class TodoEditScreen extends React.Component {
     return (
       <View style={styles.container}>
         <TextInput style={styles.todoEditInput} multiline value="SpeechLinksのSEO対策"/>
-        <CircleButton style={styles.editButton}>
+        <CircleButton style={styles.editButton} onPress={() => { this.props.navigation.goBack(); }}>
           {'\uf00c'}
         </CircleButton>
       </View>

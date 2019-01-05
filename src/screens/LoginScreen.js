@@ -10,7 +10,7 @@ class LoginScreen extends React.Component {
         </Text>
         <TextInput style={styles.input} value="Email"/>
         <TextInput style={styles.input} value="Password"/>
-        <TouchableHighlight style={styles.button} underlayColor="firebrick" onPress={() => {}}>
+        <TouchableHighlight style={styles.button} underlayColor="firebrick" onPress={() => { this.props.navigation.navigate('TodoList'); }}>
           <Text style={styles.buttonTitle}>Log in!</Text>
         </TouchableHighlight>
       </View>
