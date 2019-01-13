@@ -1,6 +1,7 @@
 import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 import firebase from 'firebase';
+require("firebase/firestore");
 
 import TodoListScreen from './src/screens/TodoListScreen';
 import TodoDetailScreen from './src/screens/TodoDetailScreen';
@@ -22,14 +23,14 @@ var config = {
 firebase.initializeApp(config);
 
 const App = createStackNavigator({
+  TodoList: {
+    screen: TodoListScreen,
+  },
   Login: {
     screen: LoginScreen,
   },
   Signup: {
     screen: SignupScreen,
-  },
-  TodoList: {
-    screen: TodoListScreen,
   },
   TodoDetail: {
     screen: TodoDetailScreen,
