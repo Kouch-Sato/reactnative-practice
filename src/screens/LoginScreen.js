@@ -1,11 +1,21 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableHighlight } from 'react-native';
+import firebase from 'firebase';
 
 class LoginScreen extends React.Component {
   state = {
     email: '',
     password: '',
   };
+
+  handleSubmit() {
+    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then((user) => {
+        this.props.navigation.navigate('TodoList');
+      })
+      .catch((error) => {
+      });
+  }
 
   render() {
     return (
@@ -30,7 +40,7 @@ class LoginScreen extends React.Component {
           placeholder="Password"
           secureTextEntry
         />
-        <TouchableHighlight style={styles.button} underlayColor="firebrick" onPress={() => { this.props.navigation.navigate('TodoList'); }}>
+        <TouchableHighlight style={styles.button} underlayColor="firebrick" onPress={ this.handleSubmit.bind(this) }>
           <Text style={styles.buttonTitle}>Log in!</Text>
         </TouchableHighlight>
       </View>

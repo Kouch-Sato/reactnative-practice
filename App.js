@@ -25,6 +25,9 @@ const App = createStackNavigator({
   Login: {
     screen: LoginScreen,
   },
+  Signup: {
+    screen: SignupScreen,
+  },
   TodoList: {
     screen: TodoListScreen,
   },
@@ -33,9 +36,6 @@ const App = createStackNavigator({
   },
   TodoEdit: {
     screen: TodoEditScreen,
-  },
-  Signup: {
-    screen: SignupScreen,
   },
 }, {
   defaultNavigationOptions: {
