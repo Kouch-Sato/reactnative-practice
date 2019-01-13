@@ -8,8 +8,9 @@ import CircleButton from '../elements/CircleButton';
 class TodoListScreen extends React.Component {
   handlePress () {
     const db = firebase.firestore();
+    const { params } =  this.props.navigation.state;
     db.settings({　timestampsInSnapshots: true　});
-    db.collection('todos').add({
+    db.collection(`users/${params.currentUser.user.uid}/todos`).add({
       body: '俺の夢',
       createOn: '2019-01-01',
     })
