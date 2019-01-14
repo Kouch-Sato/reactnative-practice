@@ -1,25 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import firebase from 'firebase';
 
 import TodoList from '../components/TodoList';
 import CircleButton from '../elements/CircleButton';
 
 class TodoListScreen extends React.Component {
   handlePress () {
-    const db = firebase.firestore();
     const { params } =  this.props.navigation.state;
-    db.settings({　timestampsInSnapshots: true　});
-    db.collection(`users/${params.currentUser.user.uid}/todos`).add({
-      body: '俺の夢',
-      createOn: '2019-01-01',
-    })
-    .then((docRef) => {
-      console.log(docRef.body)
-    })
-    .catch((error) => {
-      console.log(error)
-    });
+    this.props.navigation.navigate('TodoCreate', { currentUser: params.currentUser });
   }
 
   render() {
